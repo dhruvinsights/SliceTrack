@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SliceTrack — Pizza Delivery Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>SliceTrack</h1>
+  <p>Order your favorite pizza and watch it being prepared in real-time!</p>
+
+  <div class="pizza-container">
+    <div class="pizza-card">
+      <svg class="pizza-icon" viewBox="0 0 24 24"><path d="M12 2C6 2 2 6 2 12s4 10 10 10 10-4 10-10S18 2 12 2zm3 14H9v-2h6v2zm0-4H9V8h6v4z"/></svg>
+      <div class="pizza-name">Margherita</div>
+      <button onclick="startOrder('Margherita')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+      <svg class="pizza-icon" viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11s4 9 9 9 9-4 9-9-4-9-9-9zm1 13h-2v-2h2v2zm0-4h-2V7h2v4z"/></svg>
+      <div class="pizza-name">Pepperoni</div>
+      <button onclick="startOrder('Pepperoni')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+      <svg class="pizza-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+      <div class="pizza-name">Veggie Delight</div>
+      <button onclick="startOrder('Veggie Delight')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+      <svg class="pizza-icon" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1018 0A9 9 0 003 12zm10 4h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+      <div class="pizza-name">BBQ Chicken</div>
+      <button onclick="startOrder('BBQ Chicken')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+      <svg class="pizza-icon" viewBox="0 0 24 24"><path d="M12 2a9 9 0 100 18 9 9 0 000-18zm1 13h-2v-2h2v2zm0-4h-2V7h2v4z"/></svg>
+      <div class="pizza-name">Cheese Burst</div>
+      <button onclick="startOrder('Cheese Burst')">Order</button>
+    </div>
+  </div>
+
+  <!-- Dialog 1: Order Progress -->
+  <dialog id="orderDialog">
+    <button class="close-btn" onclick="closeDialog('orderDialog')">✕</button>
+    <h2 id="pizzaTitle"></h2>
+    <div class="status" id="statusArea"></div>
+  </dialog>
+
+  <!-- Dialog 2: Order Complete -->
+  <dialog id="doneDialog">
+    <h2>Order Complete!</h2>
+    <p>Your order is done.<br>We love your patience.<br>Enjoy your pizza!</p>
+    <button class="ok-btn" onclick="closeDialog('doneDialog')">Okay</button>
+  </dialog>
+
+  <div class="footer">© 2025 SliceTrack | Modern JavaScript Simulation</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
