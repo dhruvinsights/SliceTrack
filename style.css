@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.pizza-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.pizza-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+}
+
+.pizza-icon {
+  width: 60px;
+  height: 60px;
+  fill: #6c4ccf;
+  margin-bottom: 10px;
+}
+
+.pizza-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+}
+
+.pizza-card button {
+  background: #6c4ccf;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pizza-card button:hover {
+  background: #5438b6;
+}
+
+/* ---------------- DIALOG ---------------- */
+dialog {
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  color: #2e2e2e;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+}
+
+.status {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.step.active {
+  color: #6c4ccf;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.step.completed {
+  color: #39b86d;
+  opacity: 1;
+}
+
+.step svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.ok-btn {
+  background: #6c4ccf;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ok-btn:hover {
+  background: #5438b6;
+}
+
+.footer {
+  margin-top: 40px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+}
